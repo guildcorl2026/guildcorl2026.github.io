@@ -1,0 +1,119 @@
+<!--
+  ANONYMOUS PROJECT PAGE — MINIMAL (double-blind safe)
+  No author names, no analytics, no identity meta tags, neutral favicon.
+  Replace each {{PLACEHOLDER}}. Do NOT add an arXiv or personal/lab link while under review.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guided Data Generation, Data Attribution, Imitation Learning</title>
+  <meta name="description" content="Project page for an anonymous submission under double-blind review.">
+  <meta property="og:title" content="{{PAPER TITLE}}">
+  <meta property="og:description" content="Anonymous submission under double-blind review.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#129302;</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ink: #1b1b1a;
+      --ink-soft: #50504c;
+      --paper: #faf9f6;
+      --paper-2: #f1efe9;
+      --line: #e2dfd6;
+      --accent: #2f4858;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      font-size: 18px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    header.hero {
+      padding: 96px 0 44px;
+      text-align: center;
+      background: radial-gradient(120% 80% at 50% -10%, var(--paper-2), transparent 60%);
+    }
+    .hero h1 {
+      font-family: "Newsreader", Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2rem, 5.2vw, 3rem);
+      line-height: 1.12;
+      letter-spacing: -0.01em;
+      margin: 0 auto 24px;
+      max-width: 18ch;
+    }
+    .authors { font-size: 1.05rem; color: var(--ink-soft); }
+    .authors strong { color: var(--ink); font-weight: 600; }
+    .venue {
+      font-style: italic;
+      font-family: "Newsreader", serif;
+      color: var(--accent);
+      margin: 6px 0 26px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--paper-2);
+      border: 1px solid var(--line);
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    section.abstract {
+      padding: 52px 0 72px;
+      border-top: 1px solid var(--line);
+    }
+    h2 {
+      font-family: "Newsreader", serif;
+      font-weight: 600;
+      font-size: 1.7rem;
+      letter-spacing: -0.01em;
+      margin: 0 0 20px;
+      text-align: center;
+    }
+    p { margin: 0; }
+
+    .reveal { opacity: 0; transform: translateY(14px); animation: rise .7s ease forwards; }
+    .reveal:nth-child(2){ animation-delay:.07s } .reveal:nth-child(3){ animation-delay:.14s } .reveal:nth-child(4){ animation-delay:.21s }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce){ .reveal{ animation:none; opacity:1; transform:none; } }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="wrap">
+      <h1 class="reveal">Guided Data Generation, Data Attribution, Imitation Learning</h1>
+      <div class="authors reveal"><strong>Anonymous Author(s)</strong></div>
+      <div class="venue reveal">Paper under double-blind review &middot; {{CONFERENCE / YEAR}}</div>
+      <div class="reveal"><span class="badge">Under Review</span></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="abstract">
+      <div class="wrap">
+        <h2>Abstract</h2>
+        <p>    Robotic policies are increasingly trained on large-scale datasets collected through costly real-world interaction, yet much of this data is collected in an undirected manner, often including data that contribute little to downstream policy performance. Recent work has shown that carefully curated datasets can substantially improve policy performance, but existing approaches rely on filtering large prior datasets after they are collected, leading to wasteful data collection. In this work, we study the problem of Guided Data Collection~(GDC), which aims to actively decide what data to collect so as to maximize downstream policy performance. We introduce an iterative framework that alternates between 1)~task proposal and data collection and 2)~data evaluation. For task proposal, we leverage semantic priors from vision–language models to identify relevant environments, object configurations, and tasks for data collection. However, since semantic relevance does not necessarily imply maximal policy improvement, we perform data evaluation. By leveraging predictive data attribution we approximate how the collected trajectories influence policy performance on a target deployment setting. 
+          This signal is then used as feedback to guide subsequent data collection, closing the data collection loop. We evaluate our approach in both simulation and real-world robot settings, demonstrating that guided data collection substantially improves sample efficiency and deployment performance compared to passive data collection strategies.</p>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
